@@ -4,6 +4,9 @@ Cadence is an online radio heavily inspired by 4chan/8ch's [R/a/dio](http://r-a-
 
 Future plans for the radio include a front-end database query feature (PHP) and an advanced back-end request bot (C#).
 
+# DO NOT MERGE THIS BRANCH
+## It is only kept for historical purposes. The features it implements were implemented differently in master.
+
 ## Acknowledgements
 ### Technical Assistance
 * [Ryan Hodin](https://github.com/za419) (HTML, CSS, JS)
