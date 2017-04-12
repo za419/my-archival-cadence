@@ -19,7 +19,7 @@ function playerToggle() {
   if (stream.paused) {
     // Loads up the real stream again if mobile
     if (mobile) {
-      stream.src = "http://198.37.25.127:8000/cadence1";
+      stream.src = "http://198.37.24.193:8000/cadence1";
     }
     stream.load();
     stream.play();
@@ -46,7 +46,7 @@ function volumeToggle(vol) {
 // GETS and displays currently playing info
 function radioTitle() {
   // Located on testament's stream web folder
-  var url = 'http://198.37.25.127:8000/json.xsl';
+  var url = 'http://198.37.24.193:8000/nowPlaying.xsl';
 
   $.ajax({
     type: 'GET',
@@ -59,6 +59,7 @@ function radioTitle() {
       // do not mix up id with the "title" for the page heading
       $('#song_title').text(json['/cadence1']['song_title']);
       $('#artist_name').text(json['/cadence1']['artist_name']);
+      $('#listeners').text(json['/cadence1']['listeners']);
     },
     error: function (e) {
       console.log(e.message);
