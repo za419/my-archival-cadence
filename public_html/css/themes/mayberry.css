@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400i');
 html {
-  background-image: url(/media/lauren.png);
   opacity: 1;
+}
+
+html:after {
+  background-image: url(/media/lauren.png);
+}
+
+html:before {
+  opacity: 0;
 }
 
 body {

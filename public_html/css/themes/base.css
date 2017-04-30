@@ -11,20 +11,42 @@
 
 html {
   font-size: 1em;
-  background-color: #000000;
+  background-color: rgba(0,0,0,0);
   color: #FFFFFF;
   font-family: 'PT Sans', sans-serif;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
   /*dont know if these will help. need to revisit android chrome later */
   height: 110%;
   min-height: 110%;
   /* Keeps the horizonal scroll bar from appearing during theme transition */
   max-width: 100%;
   overflow-x: hidden;
-  transition: background-image .25s ease-in;
+  /* For transition compatibility on Firefox */
+  position: relative;
+}
+
+html:before, html:after {
+  content: "";
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  opacity: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #000000;
+}
+
+html:before {
+  z-index:-1;
+  transition: opacity .25s ease;
+}
+
+html:after {
+  z-index:-2;
+  transition: opacity .25s ease;
 }
 
 body {

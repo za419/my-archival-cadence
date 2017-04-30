@@ -1,4 +1,11 @@
 html {
   color: #f0f0f0;
+}
+
+html:after {
   background-image: url(/media/your-name.jpg);
+}
+
+html:before {
+  opacity: 0;
 }

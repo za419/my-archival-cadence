@@ -2,7 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
 html {
   color: #f0f0f0;
+}
+
+html:after {
   background-image: url(/media/cyberpunk-bartender2.gif);
+}
+
+html:before {
+  opacity: 0;
 }
 
 body {
