@@ -1,22 +1,52 @@
 function selectChicagoEvening() {
+  
+  var selected=document.getElementById("selected-css");
+  var current=selected.href; // The URL of the currently selected theme
+  current=current.substring(current.lastIndexOf('/')+1); // ...Just the filename
+  
+  // Set the transition CSS file to be that filename in the appropriate folder
+  document.getElementById("transition-css").href="/css/themes/transition/"+current;
  
-  document.getElementById("selected-css").href = "/css/themes/chicago-evening.css";
-  document.getElementById("subtitle").innerHTML = "A Rhythmic Experience";
-  localStorage.setItem('themeKey', 'chicagoEvening');
+  // And set a callback to begin the transition in 16ms (one frame at 60FPS)
+  setTimeout(function() {
+    document.getElementById("selected-css").href = "/css/themes/chicago-evening.css";
+    document.getElementById("subtitle").innerHTML = "A Rhythmic Experience";
+    localStorage.setItem('themeKey', 'chicagoEvening');
+  }, 16);
 }
 
 function selectCyberpunkBartender() {
   
-  document.getElementById("selected-css").href = "/css/themes/cyberpunk-bartender.css";
-  document.getElementById("subtitle").innerHTML = "A Retro Cyberpunk Jukebox";
-  localStorage.setItem('themeKey', 'cyberpunkBartender');
+  var selected=document.getElementById("selected-css");
+  var current=selected.href; // The URL of the currently selected theme
+  current=current.substring(current.lastIndexOf('/')+1); // ...Just the filename
+  
+  // Set the transition CSS file to be that filename in the appropriate folder
+  document.getElementById("transition-css").href="/css/themes/transition/"+current;
+ 
+  // And set a callback to begin the transition in 16ms (one frame at 60FPS)
+  setTimeout(function() {
+    document.getElementById("selected-css").href = "/css/themes/cyberpunk-bartender.css";
+    document.getElementById("subtitle").innerHTML = "A Retro Cyberpunk Jukebox";
+    localStorage.setItem('themeKey', 'cyberpunkBartender');
+  }, 16);
 }
 
 function selectMayberry() {
   
-  document.getElementById("selected-css").href = "/css/themes/mayberry.css";
-  document.getElementById("subtitle").innerHTML = "A Rhythmic Ξxperience";
-  localStorage.setItem('themeKey', 'mayberry');
+  var selected=document.getElementById("selected-css");
+  var current=selected.href; // The URL of the currently selected theme
+  current=current.substring(current.lastIndexOf('/')+1); // ...Just the filename
+  
+  // Set the transition CSS file to be that filename in the appropriate folder
+  document.getElementById("transition-css").href="/css/themes/transition/"+current;
+ 
+  // And set a callback to begin the transition in 16ms (one frame at 60FPS)
+  setTimeout(function() {
+    document.getElementById("selected-css").href = "/css/themes/mayberry.css";
+    document.getElementById("subtitle").innerHTML = "A Rhythmic Ξxperience";
+    localStorage.setItem('themeKey', 'mayberry');
+  }, 16);
 }
 
 // This is run onload. To change the default theme, (for users that have not yet picked one) change the statement for null
