@@ -1,0 +1,4 @@
+html:before {
+  background-image: url(/media/your-name.jpg);
+  opacity: 1;
+}

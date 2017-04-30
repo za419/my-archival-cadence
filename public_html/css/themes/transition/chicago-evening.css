@@ -1,0 +1,5 @@
+html:before {
+  background-image: url("/media/chicago-traffic.gif");
+  opacity: 1;
+}
+
