@@ -1,4 +1,5 @@
 html:before {
   background-image: url(/media/cyberpunk-bartender2.gif);
   opacity: 1;
+  transition: opacity .25s ease;
 }

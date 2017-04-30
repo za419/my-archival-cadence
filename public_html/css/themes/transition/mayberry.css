@@ -1,4 +1,5 @@
 html:before {
   background-image: url(/media/lauren.png);
   opacity: 1;
+  transition: opacity .25s ease;
 }

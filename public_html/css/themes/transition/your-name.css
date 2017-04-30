@@ -1,4 +1,5 @@
 html:before {
   background-image: url(/media/your-name.jpg);
   opacity: 1;
+  transition: opacity .25s ease;
 }
