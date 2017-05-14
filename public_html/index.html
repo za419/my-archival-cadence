@@ -46,7 +46,7 @@
 
     <div id="player">
       <!-- Connection to source -->
-      <audio id="stream" src="http://198.37.24.193:8000/cadence1"></audio>
+      <audio id="stream" src="http://169.254.131.220:8000/cadence1"></audio>
 
       <!-- Display title/artist, may add more later -->
       <div id="nowPlaying">
@@ -71,15 +71,19 @@
         </li>
       </ul>
 
+      <!-- Clock -->
+      <div id="clock"></div>
 
       <!-- Theme selector -->
       <div class="dropdown">
-        <button class="dropbtn" id ="theme-button">Select Theme</button>
+        <button class="dropbtn" id="theme-button">Select Theme</button>
         <div class="dropdown-content">
           <button type="button" id="selectChicagoEvening" onclick="selectChicagoEvening()">Chicago Evening</button>
           <button type="button" id="selectCyberpunkBartender" onclick="selectCyberpunkBartender()">Cyberpunk Bartender</button>
+          <!--
           <button type="button" id="selectMayberry" onclick="selectMayberry()">Mayberry</button>
           <button type="button" id="selectElectromaster" onclick="selectElectromaster()">Electromaster</button>
+          -->
         </div>
       </div>
     </div>
@@ -88,7 +92,9 @@
     <div class="content-left">
       <section>
         <h2>Announcements:</h2>
-        <h3>4/29: Mayberry and Electromaster themes available for a limited time!</h3>
+        <h3>5/14: Built a prototype service status checker, check out the link below</h3>
+        
+        <h4><a href="http://cadence.kenellorando.com/status" target="_blank">Check Service Status</a></h4>
       </section>
       <section>
         <h2>About Cadence:</h2>
