@@ -18,20 +18,22 @@
 
   <!-- Normalization CSS -->
   <link rel="stylesheet" href="/css/normalize.css">
-  <!-- BASE CSS -->
-  <link rel="stylesheet" id="base-css" href="/css/themes/base.css">
-  <!-- Status CSS -->
-  <link rel="stylesheet" href="/css/status/status.css">
 
   <!-- jQuery Google CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- Clock -->
   <script src="/js/clock.js"></script>
+
+  <script type="text/javascript">
+    var streamSource = $streamSource;
+    console.log(streamSource);
+
+  </script>
 </head>
 
 
 <body onload="clock();">
-  <h1>Cadence Radio Status</h1>
+  <h1>Cadence Status</h1>
   <!-- Clock -->
   <div id="heading-time">
     <div>Data as of Server Time:
@@ -44,67 +46,15 @@
       echo "$date_time";
       ?> (UTC-6)
     </div>
-    <div>Local Time: <span id="clock"></span></div>
   </div>
 
-  <ul>
-    <li>Webserver FTP:
-      <?php
-          $host = 'localhost'; 
-            $port = 21; 
-            $waitTimeoutInSeconds = 3; 
-            if($fp = fsockopen($host,$port,$errCode,$errStr,$waitTimeoutInSeconds)){   
-               echo ("<div style='color:#7CFC00'> ONLINE </div>");
-            } else {
-               echo ("<div style ='color:#cc0000'> OFFLINE </div>");
-            } 
-            fclose($fp);
-        ?>
-    </li>
-    <li>Webserver dummy port:
-      <?php
-          $host = 'localhost'; 
-            $port = 100000; 
-            $waitTimeoutInSeconds = 3; 
-            if($fp = fsockopen($host,$port,$errCode,$errStr,$waitTimeoutInSeconds)){   
-               echo ("<div style='color:#7CFC00'> ONLINE </div>");
-            } else {
-               echo ("<div style ='color:#cc0000'> OFFLINE </div>");
-            } 
-            fclose($fp);
-        ?>
-    </li>
-    <li>Google HTTP port:
-      <?php
-          $host = 'google.com'; 
-            $port = 80; 
-            $waitTimeoutInSeconds = 3; 
-            if($fp = fsockopen($host,$port,$errCode,$errStr,$waitTimeoutInSeconds)){   
-               echo ("<div style='color:#7CFC00'> ONLINE </div>");
-            } else {
-               echo ("<div style ='color:#cc0000'> OFFLINE </div>");
-            } 
-            fclose($fp);
-        ?>
-    </li>
-    <li>Google dummy port:
-      <?php
-          $host = 'google.com'; 
-            $port = 100000; 
-            $waitTimeoutInSeconds = 3; 
-            if($fp = fsockopen($host,$port,$errCode,$errStr,$waitTimeoutInSeconds)){   
-               echo ("<div style='color:#7CFC00'> ONLINE </div>");
-            } else {
-               echo ("<div style ='color:#cc0000'> OFFLINE </div>");
-            } 
-            fclose($fp);
-        ?>
-    </li>
-    <li>Music Streaming Server:
-      <?php
+  <!-- Primary Stream -->
+  <p>Music Stream Server: </p>
+  <div id="statusMusicStream">
+    <?php
           $host = '169.254.131.220'; 
             $port = 8000; 
-            $waitTimeoutInSeconds = 3; 
+            $waitTimeoutInSeconds = 2; 
             if($fp = fsockopen($host,$port,$errCode,$errStr,$waitTimeoutInSeconds)){   
                echo ("<div style='color:#7CFC00'> ONLINE </div>");
             } else {
@@ -112,21 +62,55 @@
             } 
             fclose($fp);
         ?>
-    </li>
-    <li>Song Metadata Database:
-      <?php
-        $host = '169.254.131.220'; 
-          $port = 3306; 
-          $waitTimeoutInSeconds = 3; 
-          if($fp = fsockopen($host,$port,$errCode,$errStr,$waitTimeoutInSeconds)){   
-             echo ("<div style='color:#7CFC00'> ONLINE </div>");
+  </div>
+  <p>Metadata Database: </p>
+  <!-- Metadata Database -->
+  <div id="statusSongDatabase">
+    <?php
+        $host = 'localhost'; 
+          $port = 2083; 
+          $waitTimeoutInSeconds = 2; 
+          if($fp = fsockopen($host,$port,$errCode,$errStr,$waitTimeoutInSeconds)){ 
+            
+             $servername = "localhost";
+        // Query has permission only to select
+        $username = "kenellor_query";
+        $password = "query1";
+
+        // Create connection
+        $con = new mysqli($servername, $username, $password);
+
+        // Check connection
+        if ($con->connect_error) {
+          // die("Failed " . $con->connect_error);
+          echo("<div style ='color:#FF6347'> ONLINE  (QUERYING FAILED) </div>");
+        } else {
+          echo ("<div style='color:#7CFC00'> ONLINE </div>");
+        }
             } else {
                echo ("<div style ='color:#cc0000'> OFFLINE </div>");
           } 
           fclose($fp);
       ?>
-    </li>
-  </ul>
+  </div>
+  <!-- Webserver FTP -->
+  <p>Webserver FTP: </p>
+  <div id="statusWebserverFTP">
+    <?php
+          $host = 'localhost'; 
+            $port = 21; 
+            $waitTimeoutInSeconds = 2; 
+            if($fp = fsockopen($host,$port,$errCode,$errStr,$waitTimeoutInSeconds)){   
+               echo ("<div style='color:#7CFC00'> ONLINE </div>");
+            } else {
+               echo ("<div style ='color:#cc0000'> OFFLINE </div>");
+            } 
+            fclose($fp);
+        ?>
+  </div>
+
+  <hr/>
+  
 </body>
 
 </html>

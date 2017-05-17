@@ -11,31 +11,26 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
   <!-- OLD FONT: Permenant Marker
-	Heading: Rock Salt; Subtitle: Roboto 300; All else: PT Sans -->
+	Heading: Rock Salt; Subtitle: Roboto 300i; All else: PT Sans -->
   <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
   <!-- Normalization CSS -->
   <link rel="stylesheet" href="/css/normalize.css">
-  <!-- BASE CSS -->
+  <!-- Radio Base CSS -->
   <link rel="stylesheet" id="base-css" href="/css/themes/base.css">
-  <!-- Selected Style CSS -->
-  <link rel="stylesheet" id="selected-css" href="">
-
-  <!-- Volume Control CSS -->
-  <link href="/css/volume-bar.css" rel="stylesheet">
-  <!-- Dropdown CSS -->
-  <link href="/css/dropdown.css" rel="stylesheet">
+  <!-- Selected style CSS -->
+  <link rel="stylesheet" id="selected-css" href=".">
 
   <!-- jQuery Google CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- Randomization of cyberpunk background -->
   <script src="/js/cyberpunk-bartender.js"></script>
-  <!-- Player buttons functionality and now playing live info-->
-  <script src="/js/player.js"></script>
-  <!-- Theme changes after base -->
+  <!-- Theme Changer -->
   <script src="/js/theme-changer.js"></script>
+  <!-- Radio-page script -->
+  <script src="/js/radio-page.js"></script>
 </head>
 
 
@@ -54,7 +49,6 @@
         <span id="song_title"></span>
       </div>
 
-
       <!-- Buttons stacked-->
       <ul id="playerButtonList">
         <li>
@@ -66,8 +60,7 @@
         </li>
         <li>
           <!-- VOLUME -->
-          <!-- The volume bar will glitch at first without value="100" because the default volume is always at 100 on load -->
-          <input type="range" id="volume" value="1" min="0" max="1" step=".01" oninput="volumeToggle(this.value)" onchange="volumeToggle(this.value)">
+          <input type="range" id="volume" value="1" min="0" max="1" step="0.01" oninput="volumeToggle(this.value)" onchange="volumeToggle(this.value)">
         </li>
       </ul>
 
@@ -90,12 +83,12 @@
   </main>
   <div id="content">
     <div class="content-left">
+
       <section>
         <h2>Announcements:</h2>
-        <h3>5/14: Built a prototype service status checker, check out the link below</h3>
-        
-        <h4><a href="http://cadence.kenellorando.com/status" target="_blank">Check Service Status</a></h4>
+        <h3 class="announcement">5/15: Still looking for a way to set the music server back up in a reliable way. May unfortunately take weeks. Until then, work continues on the database.</h3>
       </section>
+
       <section>
         <h2>About Cadence:</h2>
         <p>Cadence is an online radio heavily inspired by 4chan/8ch's <a href="http://r-a-d.io/">R/a/dio</a>. The project is my first endeavour to practice a full range of IT-skills.</p>
@@ -109,25 +102,57 @@
 
     <div class="content-right">
       <section>
+        <h2>Service Status: </h2>
+        <table id="statusTable" style="display: block">
+          <tr>
+            <td>Music Stream Server</td>
+            <td>
+              <div class="check" id="statusMusicStream">Checking...</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Metadata Database</td>
+            <td>
+              <div class="check" id="statusSongDatabase">Checking...</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Web Server FTP</td>
+            <td>
+              <div class="check" id="statusWebserverFTP">Checking...</div>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section>
         <h2>Changelog:</h2>
         <ul>
+          <li>5/15: New status checker displays live-info of services</li>
+          <li>5/14: Cyberpunk theme changes from a day/night version based on client time (10PM-8AM). </li>
+          <li>5/12: Database populator tool rewritten in Python</li>
           <li>4/29: Transitions for theme switching added + Two new themes: Mayberry &amp; Electromaster + Sizing correction for all screen sizes</li>
           <li>4/9: New Server OS + New domain name!</li>
           <li>3/29: User set volume is now cached</li>
           <li>3/26: Stream toggle no longer resets theme or volume + user picked themes are now cached + Cyberpunk Bartender updated</li>
-          <li>3/25: Live display of artist and track make Cadence DMCA compliant</li>
-          <li>3/24: Database populator tool completed</li>
-          <li>3/22: Stream/source moved to dedicated server</li>
-          <li>3/3: Changable themes (new theme: Cyberpunk Bartender) + fixed Android Chrome background sizing bug</li>
-          <li>3/2: Custom stream/volume controls + pause desynchronization fixed (unless stream ends)</li>
-          <li>3/1: Front-end prototype design</li>
-          <li>2/28: Auto streaming (until the IP expires)</li>
-          <li>2/26: Streaming client and stream source</li>
+
+          <h4><a id="oldToggle" onclick="toggleChangelog()">Show Full History</a></h4>
+          <div id="old">
+            <li>3/25: Live display of artist and track make Cadence DMCA compliant</li>
+            <li>3/24: Database populator tool completed</li>
+            <li>3/22: Stream/source moved to dedicated server</li>
+            <li>3/3: Changable themes (new theme: Cyberpunk Bartender) + fixed Android Chrome background sizing bug</li>
+            <li>3/2: Custom stream/volume controls + pause desynchronization fixed (unless stream ends)</li>
+            <li>3/1: Front-end prototype design</li>
+            <li>2/28: Auto streaming (until the IP expires)</li>
+            <li>2/26: Streaming client and stream source</li>
+          </div>
         </ul>
       </section>
     </div>
 
   </div>
+
+
   <!-- /CONTENT -->
   <footer>A project by Ken Ellorando</footer>
   <!-- Do not remove footer; clears backdrop below content -->

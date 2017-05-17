@@ -10,7 +10,7 @@ function selectChicagoEvening() {
 function selectCyberpunkBartender() {
   cancelSwitcher();
 
-  document.getElementById("title").innerHTML = "CADEN<span>C</span>E";
+  document.getElementById("title").innerHTML = "CADENCE";
   document.getElementById("subtitle").innerHTML = "A Retro Cyberpunk Jukebox";
 
   var currentHour = new Date().getHours();
