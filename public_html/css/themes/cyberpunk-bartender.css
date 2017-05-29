@@ -7,6 +7,7 @@ html {
   color: #f0f0f0;
   background-image: url(/media/cyberpunk-bartender2.gif);
   background-color: black;
+  background-position: -32em;
 }
 
 /* Handles the fade animation for the switcher */
@@ -20,7 +21,6 @@ html.transition {
 @keyframes fade {
   0% { background-color: white;  }
   100% { background-color: black; }
-}
 
 body {
   /*Opacity of content within body*/
@@ -83,6 +83,13 @@ body {
   border-color: cyan;
   color: cyan;
   box-shadow: 1px 1px 65px cyan;
+}
+
+/* Resets background position to center */
+@media (min-width: 30em) {
+  html {
+    background-position: center;
+  }
 }
 
 

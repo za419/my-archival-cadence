@@ -18,22 +18,20 @@
 
   <!-- Normalization CSS -->
   <link rel="stylesheet" href="/css/normalize.css">
+  <!-- Subpage CSS -->
+  <link rel="stylesheet" href="/css/themes/base-subpage.css">
 
   <!-- jQuery Google CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <!-- Clock -->
-  <script src="/js/clock.js"></script>
-
-  <script type="text/javascript">
-    var streamSource = $streamSource;
-    console.log(streamSource);
-
-  </script>
 </head>
 
 
 <body onload="clock();">
-  <h1>Cadence Status</h1>
+  <div class="heading">
+    <h1><a href="http://cadence.kenellorando.com">CADENCE</a></h1>
+    <p class="subtitle">Service Status</p>
+  </div>
+
   <!-- Clock -->
   <div id="heading-time">
     <div>Data as of Server Time:
@@ -48,23 +46,22 @@
     </div>
   </div>
 
-  <!-- Primary Stream -->
-  <p>Music Stream Server: </p>
-  <div id="statusMusicStream">
+  
+  <!-- Music Server -->
+  <p>Music Server Stream Port: </p>
+  <div id='statusMusicStream'>
     <?php
-          $host = '169.254.131.220'; 
-            $port = 8000; 
-            $waitTimeoutInSeconds = 2; 
-            if($fp = fsockopen($host,$port,$errCode,$errStr,$waitTimeoutInSeconds)){   
-               echo ("<div style='color:#7CFC00'> ONLINE </div>");
-            } else {
-               echo ("<div style ='color:#cc0000'> OFFLINE </div>");
-            } 
-            fclose($fp);
-        ?>
+       $fp = fsockopen("udp://73.45.232.200", 8000, $errno, $errstr);
+       if (!$fp) {
+            echo ("<div style ='color:#cc0000'> OFFLINE </div>");
+       } else {
+         echo ("<div style='color:#7CFC00'> ONLINE </div>");
+       }
+     ?>
   </div>
-  <p>Metadata Database: </p>
+
   <!-- Metadata Database -->
+  <p>Metadata Database: </p>
   <div id="statusSongDatabase">
     <?php
         $host = 'localhost'; 
@@ -93,6 +90,7 @@
           fclose($fp);
       ?>
   </div>
+
   <!-- Webserver FTP -->
   <p>Webserver FTP: </p>
   <div id="statusWebserverFTP">
@@ -108,8 +106,6 @@
             fclose($fp);
         ?>
   </div>
-
-  <hr/>
   
 </body>
 
