@@ -87,6 +87,8 @@ p {
   text-align: center;
   width: 100%;
   padding: 0.56em 0em 1.56em 0em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
 
@@ -96,8 +98,7 @@ p {
   font-size: 1.2em;
   padding: 0em 0em 0em 0em;
   min-height: 4em;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  
 }
 
 #nowPlaying span {
@@ -459,6 +460,8 @@ a:active {
 future reference: replace animation with transition */
 
 input[type=range] {
+  appearance: none;
+  -moz-appearance: none;
   -webkit-appearance: none;
   margin: 10px 0;
   width: 100%;
