@@ -80,4 +80,4 @@ function defaultTheme() {
 // Reselects for time-based themes at a set interval
 window.setInterval(function () {
   defaultTheme();
-}, 10000);
+}, 10000); // At the moment, the only thing this acheives is testing for nightmode. This timer controls how often this occurs.
