@@ -6,6 +6,8 @@ Special functions:
     set "videoPath" to path to the video to be played
   Theme callback
     set "callback" to the name of the function to be called after the theme is set
+
+  This file must be loaded after cyberpunk-bartender.js, or else it will not load properly.
 */
 
 var theme = {
@@ -64,7 +66,8 @@ var theme = {
     "subtitle": "A Retro Cyberpunk Jukebox",
     "themeColor": "#B30E67",
     "themeColorRead": "#B30E67 hot pink",
-    "themeKey": "cyberpunkBartender"
+    "themeKey": "cyberpunkBartender",
+    "callback": cyberpunkBackgroundSwitcher
   },
   "cyberpunkBartenderNight": {
     "hasNightMode": true,
