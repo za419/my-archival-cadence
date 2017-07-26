@@ -43,6 +43,10 @@ function themeChanger(themeName) {
     if (themeObjNight.videoPath) {
       setVideo(themeObjNight);
     }
+    // If the nightmode has a callback, call it.
+    if (themeObjNight.callback) {
+        themeObjNight.callback();
+    }
   }
   // Otherwise, no nightmode to fall back on
   else {
@@ -54,6 +58,10 @@ function themeChanger(themeName) {
     localStorage.setItem('themeKey', themeObj.themeKey);
     if (themeObj.videoPath) {
       setVideo(themeObj);
+    }
+    // If the theme has a callback, call it.
+    if (themeObj.callback) {
+        themeObj.callback();
     }
   }
 }
