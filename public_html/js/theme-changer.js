@@ -15,7 +15,7 @@ function setVideo(themeObj) {
   }
 }
 
-// Handles clicks 
+// Handles clicks
 $(document).ready(function () {
   $('.themeChoice').on('click', function () {
     var themeChoice = $(this).attr('id');
@@ -31,6 +31,7 @@ function themeChanger(themeName) {
 
   // If a nightmode exists and it is nighttime
   if (themeObj.hasNightMode == true && (currentHour < 8 || currentHour > 22)) {
+    cyberpunkNight = true; // Inform the cyberpunk switcher that its nighttime
     themeNameNight = themeName + "Night";
     var themeObjNight = theme[themeNameNight];
     document.getElementById("selected-css").href = themeObjNight.cssPath;
@@ -45,6 +46,7 @@ function themeChanger(themeName) {
   }
   // Otherwise, no nightmode to fall back on
   else {
+    cyberpunkNight = false; // Inform the cyberpunk switcher that its daytime. Or, that the current theme doesn't support nightmode, which means it doesn't matter.
     document.getElementById("selected-css").href = themeObj.cssPath;
     document.getElementById("title").innerHTML = themeObj.title;
     document.getElementById("subtitle").innerHTML = themeObj.subtitle;
