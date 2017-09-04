@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Cadence Radio - An open source, commercial-free radio by Ken Ellorando " />
+  <meta name="description" content="Ken Ellorando's personal online radio" />
   <meta name="keywords" content="Cadence, Radio, Cadence Radio, CadenceRadio, free radio, open source radio, github, Ken Ellorando radio" />
 
   <!-- Meta-tags for theme colors, etc -->
@@ -16,16 +16,13 @@
   <title>Cadence Radio</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- OLD FONT: Permenant Marker
-	Heading: Rock Salt; Subtitle: Roboto 300i; All else: PT Sans -->
+  <!-- Heading: Rock Salt; Subtitle: Roboto 300i; All else: PT Sans -->
   <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
-  <!-- Normalization CSS -->
-  <link rel="stylesheet" href="/css/normalize.css">
-  <!-- Radio Base CSS -->
-  <link rel="stylesheet" id="base-css" href="/css/themes/base.css">
+  <!-- Import base, norm, modules CSS -->
+  <link rel="stylesheet" href="/css/master-import.css">
   <!-- Selected style CSS -->
   <link rel="stylesheet" id="selected-css" href=".">
 
@@ -49,7 +46,7 @@
 
     <div id="player">
       <!-- Connection to source -->
-      <audio id="stream" src="http://73.45.232.200:8000/cadence1"></audio>
+      <audio id="stream" src="http://198.37.24.81:8000/cadence1"></audio>
 
       <!-- Display title/artist, may add more later -->
       <div id="nowPlaying">
@@ -61,7 +58,7 @@
       <ul id="playerButtonList">
         <li>
           <!-- ON/OFF -->
-          <button type="button" id="playerToggle" onclick="playerToggle()">►</button>
+          <button type="button" id="playerToggle">►</button>
         </li>
         <li id="volumeLabel">
           <label for="volume">Volume</label>
@@ -72,17 +69,23 @@
         </li>
       </ul>
 
+      <div>
+        <p style="margin:0;">ARIA: A Cadence Sister Project</p>
+        <p style="margin:0 0 30px 0;">Coming October 2017</p>
+      </div>
+
       <!-- Theme selector -->
       <div class="dropdown">
         <button class="dropbtn" id="theme-button">Select Theme</button>
         <div class="dropdown-content">
           <button type="button" class="themeChoice" id="chicagoEvening">Chicago Evening</button>
           <button type="button" class="themeChoice" id="cyberpunkBartender">Cyberpunk Bartender</button>
-          <button type="button" class="themeChoice" id="lightMage">Light Mage</button>
+
           <!--
+          <button type="button" class="themeChoice" id="electromaster">Electromaster</button>
+		      <button type="button" class="themeChoice" id="lightMage">Light Mage</button>
           <button type="button" class="themeChoice" id="yorha">YoRHa</button>
           <button type="button" class="themeChoice" id="mayberry">Mayberry</button>
-          <button type="button" class="themeChoice" id="electromaster">Electromaster</button>
           <button type="button" class="themeChoice" id="starGuardian">Star Guardian</button>
           -->
         </div>
@@ -94,8 +97,8 @@
 
       <section>
         <h2>Announcements:</h2>
-        <h3 class="announcement">7/25: </h3>
-        <p>I've decided to elevate 'Light Mage' as Cadence's third permanent theme!</p>
+        <h3 class="announcement">8/28: </h3>
+        <p>Current musical theme: <b>Japanese Disco / Funk</b></p>
       </section>
 
       <section>
@@ -104,7 +107,7 @@
 
         <p>By default, the server plays all the genres of music I like, mostly classic rock, synthpop, and metal. But you'll also find anything from rap to orchestral to Jpop. I occasionally override the server and manually DJ.</p>
 
-        <p>The primary feature development of the radio has ended, though I'm continually improving existing code as I learn. If you're interested in seeing this project's development, nearly everything is available on GitHub: <a href="https://github.com/kenellorando/CadenceRadio">source</a>/<a href="https://github.com/kenellorando/CadenceRadio/issues">issues</a>.</p>
+        <p>Though the primary feature development of the radio has ended, I'm continually improving existing code as I learn. If you're interested in seeing this project's development, nearly everything is available on GitHub: <a href="https://github.com/kenellorando/CadenceRadio">source</a>/<a href="https://github.com/kenellorando/CadenceRadio/issues">issues</a>.</p>
         <p><b>Cadence Radio is a DMCA compliant, non-commercial webcast made for educational purposes.</b></p>
       </section>
     </div>
@@ -135,7 +138,7 @@
       </section>
 
 
-      <section>
+      <section id="changelog">
         <h2>Changelog:</h2>
         <ul>
           <li>7/22: Theme-changing code reoptimized</li>
@@ -166,21 +169,18 @@
         </div>
       </section>
     </div>
-
   </div>
-
-
-
   <!-- /CONTENT -->
   <footer>A project by Ken Ellorando</footer>
   <!-- Do not remove footer; clears backdrop below content -->
+
+  <div class="fullscreen-bg">
+    <video loop muted autoplay class="fullscreen-bg-video">
+      <source id="video-source" src="" type="video/mp4">
+    </video>
+  </div>
 </body>
 
 
-<div class="fullscreen-bg">
-  <video loop muted autoplay class="fullscreen-bg-video">
-    <source id="video-source" src="" type="video/mp4">
-  </video>
-</div>
 
 </html>

@@ -22,7 +22,7 @@ var theme = {
   "yorha": {
     "cssPath": "/css/themes/yorha.css",
     "title": "CADENCE",
-    "subtitle": "For The Glory of Mankind",
+    "subtitle": "A Rhythmic [E]xperience",
     "themeColor": "#000000",
     "themeColorRead": "#000000 black",
     "themeKey": "yorha"
