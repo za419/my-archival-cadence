@@ -8,6 +8,10 @@ Though the primary feature development of the radio has ended, I'm continually i
 
 **Cadence Radio is a DMCA compliant, non-commercial webcast made for educational purposes.**
 
+## Contributing
+
+Before contributing, please read our [Code of Conduct](CODE_OF_CONDUCT.md).
+
 ## Features
 * A 24/7 audio livestream
 * Automatically updating song info display
