@@ -1,4 +1,7 @@
 # Cadence Radio [http://cadenceradio.com](http://cadenceradio.com/)
+
+![image](https://user-images.githubusercontent.com/15851480/31005763-b56161b2-a4bf-11e7-8e0f-38ee78ff542d.png)
+
 ## About
 Cadence is an online radio heavily inspired by [R/a/dio](http://r-a-d.io/). Originally started in February 2017, the project is my first endeavour to practice a full range of IT-skills. Development continues today with a focus on back-end technology.
 
