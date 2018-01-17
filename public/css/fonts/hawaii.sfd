@@ -1,0 +1,109 @@
+SplineFontDB: 3.0
+FontName: Untitled1
+FullName: Untitled1
+FamilyName: Untitled1
+Weight: Regular
+Copyright: Copyright (c) 2018, Ryan
+UComments: "2018-1-16: Created with FontForge (http://fontforge.org)"
+Version: 001.000
+ItalicAngle: 0
+UnderlinePosition: -100
+UnderlineWidth: 50
+Ascent: 800
+Descent: 200
+InvalidEm: 0
+LayerCount: 2
+Layer: 0 0 "Back" 1
+Layer: 1 0 "Fore" 0
+XUID: [1021 487 1509910258 23111]
+OS2Version: 0
+OS2_WeightWidthSlopeOnly: 0
+OS2_UseTypoMetrics: 1
+CreationTime: 1516162771
+ModificationTime: 1516163468
+OS2TypoAscent: 0
+OS2TypoAOffset: 1
+OS2TypoDescent: 0
+OS2TypoDOffset: 1
+OS2TypoLinegap: 0
+OS2WinAscent: 0
+OS2WinAOffset: 1
+OS2WinDescent: 0
+OS2WinDOffset: 1
+HheadAscent: 0
+HheadAOffset: 1
+HheadDescent: 0
+HheadDOffset: 1
+OS2Vendor: 'PfEd'
+DEI: 91125
+Encoding: ISO8859-1
+UnicodeInterp: none
+NameList: AGL For New Fonts
+DisplaySize: -48
+AntiAlias: 1
+FitToEm: 0
+WinInfo: 0 38 14
+BeginChars: 256 1
+
+StartChar: C
+Encoding: 67 67 0
+Width: 1000
+VWidth: 0
+InSpiro: 1
+Flags: HWO
+HStem: 9.75 51.8398<428.601 640.094> 826.23 56.1602<451.156 657.217>
+VStem: 65.917 81<323.913 545.357>
+LayerCount: 2
+Fore
+SplineSet
+165 603 m 1024,0,-1
+  Spiro
+    165 603 {
+    0 0 z
+  EndSpiro
+669 882 m 0,1,-1
+ 521 910 360 875 244 788 c 0,4,-1
+ 128 702 61 567 66 433 c 0,7,-1
+ 71 308 138 187 246 107 c 0,10,-1
+ 354 27 501 -9 639 10 c 0,13,-1
+ 639 10 643 41 646 62 c 17,16,-1
+ 507 43 420 67 312 147 c 0,19,-1
+ 204 226 152 281 147 406 c 0,22,-1
+ 142 540 209 675 325 761 c 0,25,-1
+ 441 847 510 854 657 826 c 0,28,-1
+ 669 882 l 0,1,-1
+  Spiro
+    668.557 882.391 o
+    518.711 889.594 o
+    372.527 857.217 o
+    244.001 788.359 o
+    145.343 687.848 o
+    84.0246 565.527 o
+    65.917 433.11 o
+    90.6929 311.028 o
+    152.393 199.246 o
+    245.854 107.118 o
+    364.895 42.3703 o
+    499.84 8.98319 o
+    639.397 9.75 o
+    640.355 18.6936 o
+    642.76 39.2129 o
+    645.877 61.5898 v
+    521.803 57.6116 o
+    415.716 85.0133 o
+    312.157 146.55 o
+    222.5 221.391 o
+    167.889 300.954 o
+    146.917 405.75 o
+    165.025 538.167 o
+    226.343 660.488 o
+    325 761 o
+    429.627 822.403 o
+    531.27 840.888 o
+    657.217 826.23 o
+    0 0 z
+  EndSpiro
+EndSplineSet
+EndChar
+EndChars
+EndSplineFont
