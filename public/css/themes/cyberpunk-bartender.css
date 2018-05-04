@@ -6,7 +6,6 @@
 html {
   color: #f0f0f0;
   background-color: black;
-  background-image: url("https://i.imgur.com/jwmBsvs.gif");
   background-position: -32em;
 }
 
@@ -21,6 +20,7 @@ html.transition {
 @keyframes fade {
   0% { background-color: white;  }
   100% { background-color: black; }
+}
 
 body {
   /*Opacity of content within body*/
@@ -50,7 +50,7 @@ body {
 }
 
 /* Subtle blink to go with the glow */
-
+/* Disabled for now
 @keyframes blinker {
   0% {
     opacity: 0.1;
@@ -79,7 +79,7 @@ body {
   87% {
     opacity: 1;
   }
-}
+} */
 
 #subtitle {
   color: #f0f0f0;
