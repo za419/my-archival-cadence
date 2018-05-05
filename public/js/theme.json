@@ -164,5 +164,13 @@ var theme = {
     "themeColor": "#FFFFFF",
     "themColorRead": "undecided",
     "themeKey": "yourName"
+  },
+  "nebula": {
+    "cssPath": "/css/themes/nebula.css",
+    "title": "CADENCE",
+    "subtitle": "An  Experience",
+    "themeColor": "#221B2B",
+    "themeColorRead": "#221B2B a very dark purple",
+    "themeKey": "nebula"
   }
 }
