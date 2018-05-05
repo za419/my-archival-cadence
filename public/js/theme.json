@@ -162,7 +162,7 @@ var theme = {
     "title": "CADENCE",
     "subtitle": "A Name To Remember",
     "themeColor": "#FFFFFF",
-    "themColorRead": "undecided",
+    "themeColorRead": "#FFFFFF white",
     "themeKey": "yourName"
   },
   "nebula": {
@@ -172,5 +172,13 @@ var theme = {
     "themeColor": "#221B2B",
     "themeColorRead": "#221B2B a very dark purple",
     "themeKey": "nebula"
+  },
+  "sanFrancisco": {
+    "cssPath": "/css/themes/san-francisco.css",
+    "title": "CADENCE",
+    "subtitle": "A Foggy Experience",
+    "themeColor": "#2F253C",
+    "themeColorRead": "#2F253C dark purple",
+    "themeKey": "sanFrancisco"
   }
 }
