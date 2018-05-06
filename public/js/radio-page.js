@@ -21,7 +21,7 @@ function defaultPlayer() {
 }
 
 function closeOverlay() {
-    document.getElementById("#static-overlay").style.display="none"
+    document.getElementById("static-overlay").style.display="none"
 }
 
 $(document).ready(function() {
