@@ -298,6 +298,17 @@ a:active {
   background: rgba(0, 0, 0, 0.5);
 }
 
+#static-message {
+  width: 25%;
+  height: 12.5%;
+  display: block;
+  position: fixed;
+  top: 43.75%;
+  left: 37.5%;
+  border: 1px solid black;
+  background: rgba(255, 255, 255, 0.8)
+}
+
 
 /* MEDIA QUERIES ************************************************************************/
 
