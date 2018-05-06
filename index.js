@@ -1,5 +1,5 @@
-const PORT = 8080;
-const IP = '198.37.25.198';
+const PORT = 80;
+const IP = require('dns').lookup(require('os').hostname(), function(){});
 const DB_URL = 'mongodb://localhost:27017/cadence';
 const MUSIC_DIR = '/music';
 
