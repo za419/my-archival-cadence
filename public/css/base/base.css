@@ -330,8 +330,8 @@ a:active {
 @media (orientation: portrait) {
   #static-message {
     width: 80%;
-    height: 20%;
-    top: 40%;
+    height: 35%;
+    top: 32.5%;
     left: 10%;
   }
 }
