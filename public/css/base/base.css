@@ -313,15 +313,14 @@ a:active {
 }
 
 #static-message span {
+  float: none;
   display: table-cell;
   vertical-align: middle;
 }
 
 #close {
   display: inline-block;
-  position: absolute;
-  right: 5px;
-  top: 0px;
+  float: right;
   color: gray;
 }
 
