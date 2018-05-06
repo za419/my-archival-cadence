@@ -30,7 +30,7 @@ $(document).ready(function() {
     document.getElementById("static-message").addEventListener('click', function (e) {
         e.stopPropagation()
         return false
-    }, {capture: true})
+    })
 })
 
 // Play/pause button
