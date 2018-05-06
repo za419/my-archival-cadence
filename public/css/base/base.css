@@ -328,6 +328,15 @@ a:active {
 
 /* MEDIA QUERIES ************************************************************************/
 
+@media (orientation: portrait) {
+  #static-message {
+    width: 80%;
+    height: 20%;
+    top: 40%;
+    left: 10%;
+  }
+}
+
 @media (min-width: 37em) {
   html {
     font-size: 1em;
