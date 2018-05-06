@@ -1,4 +1,4 @@
-/* 
+/*
 Organization of radio-page JS
 -----------------------------
 -Retrieve set volume from localstorage
@@ -26,6 +26,11 @@ function closeOverlay() {
 
 $(document).ready(function() {
     document.getElementById("static-overlay").addEventListener('click', closeOverlay)
+    document.getElementById("close").addEventListener('click', closeOverlay)
+    document.getElementById("static-message").addEventListener('click', function (e) {
+        e.stopPropagation()
+        return false
+    }, {capture: true})
 })
 
 // Play/pause button
