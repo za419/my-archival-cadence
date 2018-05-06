@@ -20,6 +20,14 @@ function defaultPlayer() {
   document.getElementById("volume").value = vol;
 }
 
+function closeOverlay() {
+    document.getElementById("#static-overlay").style.display="none"
+}
+
+$(document).ready(function() {
+    document.getElementById("static-overlay").addEventListener('click', closeOverlay)
+}
+
 // Play/pause button
 $(document).ready(function () {
   document.getElementById("playerToggle").addEventListener('click', function(){
