@@ -26,7 +26,7 @@ function closeOverlay() {
 
 $(document).ready(function() {
     document.getElementById("static-overlay").addEventListener('click', closeOverlay)
-}
+})
 
 // Play/pause button
 $(document).ready(function () {
