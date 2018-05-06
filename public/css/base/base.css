@@ -299,14 +299,30 @@ a:active {
 }
 
 #static-message {
-  width: 25%;
-  height: 12.5%;
-  display: block;
+  width: 40%;
+  height: 15%;
+  display: table;
   position: fixed;
-  top: 43.75%;
-  left: 37.5%;
-  border: 1px solid black;
-  background: rgba(255, 255, 255, 0.8)
+  top: 42.5%;
+  left: 30%;
+  color: black;
+  font-size: 1.3em;
+  border: 2px outset gray;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+#static-message span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#close {
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+  color: gray;
 }
 
 
