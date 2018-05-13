@@ -306,6 +306,7 @@ a:active {
   top: 42.5%;
   left: 30%;
   color: black;
+  text-shadow: none;
   font-size: 1.3em;
   border: 2px outset gray;
   background: rgba(255, 255, 255, 0.8);
