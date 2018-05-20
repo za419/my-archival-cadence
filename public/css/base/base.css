@@ -96,11 +96,11 @@ footer {
 }
 
 #title,
-#subtitle {
+.subtitle {
   transition: .25s ease;
 }
 
-#subtitle {
+.subtitle {
   text-align: center;
   padding: 0em 0em .23em 0em;
   font-size: 1.2em;
@@ -349,7 +349,7 @@ a:active {
   #title {
     font-size: 3.6em;
   }
-  #subtitle {
+  .subtitle {
     font-size: 1.44em;
   }
   #volume {

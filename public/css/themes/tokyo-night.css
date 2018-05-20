@@ -19,6 +19,6 @@ body {
   transform: scale(1.5, 1.7) translateY(-.2em);
 }
 
-#subtitle {
+.subtitle {
   font-family: 'chikara-dzuyoku-b', serif;
 }

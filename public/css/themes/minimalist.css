@@ -24,11 +24,11 @@ body {
   transform: scale(1.4, 1.6) translateY(-.1em);
 }
 
-#subtitle {
+.subtitle {
   font-size: 1.6em;
 }
 
-#subtitle,
+.subtitle,
 #volumeLabel,
 .dropbtn,
 .dropdown-content button {

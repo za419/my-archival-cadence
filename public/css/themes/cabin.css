@@ -40,7 +40,7 @@ body {
   margin-top: -1em;
 }
 
-#subtitle span {
+.subtitle span {
   display: inline-block;
   animation-play-state: running;
   animation-iteration-count: infinite;
@@ -397,11 +397,11 @@ body {
   }
 }
 
-#subtitle {
+.subtitle {
   font-size: 1.6em;
 }
 
-#subtitle,
+.subtitle,
 #volumeLabel,
 .dropbtn,
 .dropdown-content button {

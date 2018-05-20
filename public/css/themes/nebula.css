@@ -24,7 +24,7 @@ body {
   vertical-align: middle;
 }
 
-#subtitle {
+.subtitle {
   font-style: italic;
   font-weight: light;
   font-size: 2em
@@ -84,7 +84,7 @@ body {
     padding-top: 1.2em;
   }
 
-  #subtitle {
+  .subtitle {
     font-size: 1.5em;
   }
 }
